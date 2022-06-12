@@ -1,0 +1,87 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2rem;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 4px solid #ffffff;
+  text-align: left;
+  padding: 8px;
+  font-size: 20px;
+}
+
+th {
+  background-color: rgb(250, 203, 117);
+}
+
+td {
+  background-color: rgb(250, 203, 117);
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  ul{
+    list-style : none;
+    padding: 0px;
+    display: flex;
+
+    li{
+      background: #845EC2;
+      padding: 10px 15px;
+      margin-right: 4px;
+      border-radius: 4px;
+      font-family: sans-serif;
+      color: #fff;
+      font-size: 1.1rem;
+      min-width: 20px;
+      text-align: center;
+      user-select: none;
+
+      & :last-child{
+        margin-right: 0px;
+      }
+
+      &:not(.active):not(.disabled){
+        cursor: pointer;
+      }
+      &:not(.active):not(.disabled):hover{
+        background: #D65DB1;
+      }
+      &:not(.active):not(.disabled):active{
+        background: #3E207C;
+      }
+
+      &.active{
+        background: #FF6F91;
+      }
+      &.disabled{
+        background: #FBEAFF;
+        pointer-events: none;
+      }
+    }
+  }
+}
