@@ -47,8 +47,8 @@ class App extends React.Component {
      <tbody>
       {
      this.state.users ?
-              this.state.users.map((item, i) =>
-                <tr>
+              this.state.users.map((item,key) =>
+                <tr key={item.email}>
                   <td>{item.name}</td>
                   <td>{item.email}</td>
                   <td>{item.phone}</td>
